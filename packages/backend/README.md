@@ -1,2 +1,2 @@
-# Misskey Backend
+# Comduck Backend
 ![](../../assets/backend.png)

@@ -13,9 +13,9 @@
 'packages/sw':
 - packages/sw/**/*
 
-'packages/misskey-js':
-- packages/misskey-js/**/*
+'packages/comduck-js':
+- packages/comduck-js/**/*
 
-'packages/misskey-js:test':
-- packages/misskey-js/test/**/*
-- packages/misskey-js/test-d/**/*
+'packages/comduck-js:test':
+- packages/comduck-js/test/**/*
+- packages/comduck-js/test-d/**/*

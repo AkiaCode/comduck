@@ -1,7 +1,7 @@
 {
-	"name": "misskey-js",
+	"name": "comduck-js",
 	"version": "0.0.16",
-	"description": "Misskey SDK for JavaScript",
+	"description": "comduck SDK for JavaScript",
 	"main": "./built/index.js",
 	"types": "./built/index.d.ts",
 	"scripts": {

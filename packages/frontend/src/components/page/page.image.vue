@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { } from 'vue';
-import * as Misskey from 'misskey-js';
+import * as Misskey from 'comduck-js';
 import { ImageBlock } from './block.type';
 import ImgWithBlurhash from '@/components/MkImgWithBlurhash.vue';
 

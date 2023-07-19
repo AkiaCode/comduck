@@ -4,7 +4,7 @@ import * as assert from 'assert';
 import { startServer, channel, clip, cookie, galleryPost, signup, page, play, post, simpleGet, uploadFile } from '../utils.js';
 import type { SimpleGetResponse } from '../utils.js';
 import type { INestApplicationContext } from '@nestjs/common';
-import type * as misskey from 'misskey-js';
+import type * as misskey from 'comduck-js';
 
 // Request Accept
 const ONLY_AP = 'application/activity+json';

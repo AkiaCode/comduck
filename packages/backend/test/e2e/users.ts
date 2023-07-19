@@ -15,7 +15,7 @@ import {
 	failedApiCall,
 	uploadFile,
 } from '../utils.js';
-import type * as misskey from 'misskey-js';
+import type * as misskey from 'comduck-js';
 import type { INestApplicationContext } from '@nestjs/common';
 
 describe('ユーザー', () => {
@@ -31,7 +31,7 @@ describe('ユーザー', () => {
 			}, {});
 	};
 
-	// BUG misskey-jsとjson-schemaと実際に返ってくるデータが全部違う
+	// BUG comduck-jsとjson-schemaと実際に返ってくるデータが全部違う
 	type UserLite = misskey.entities.UserLite & {
 		badgeRoles: any[],
 	};

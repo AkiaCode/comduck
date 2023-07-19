@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test';
 import * as assert from 'assert';
 import { signup, api, post, connectStream, startServer } from '../utils.js';
 import type { INestApplicationContext } from '@nestjs/common';
-import type * as misskey from 'misskey-js';
+import type * as misskey from 'comduck-js';
 
 describe('Note thread mute', () => {
 	let app: INestApplicationContext;

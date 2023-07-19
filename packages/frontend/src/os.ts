@@ -5,7 +5,7 @@ export { pendingApiRequestsCount, api, apiGet };
 import { Component, markRaw, Ref, ref, defineAsyncComponent } from 'vue';
 import { EventEmitter } from 'eventemitter3';
 import insertTextAtCursor from 'insert-text-at-cursor';
-import * as Misskey from 'misskey-js';
+import * as Misskey from 'comduck-js';
 import { i18n } from './i18n';
 import MkPostFormDialog from '@/components/MkPostFormDialog.vue';
 import MkWaitingDialog from '@/components/MkWaitingDialog.vue';
@@ -19,7 +19,7 @@ import MkContextMenu from '@/components/MkContextMenu.vue';
 import { MenuItem } from '@/types/menu';
 import copyToClipboard from './scripts/copy-to-clipboard';
 import { showMovedDialog } from './scripts/show-moved-dialog';
-import { DriveFile } from 'misskey-js/built/entities';
+import { DriveFile } from 'comduck-js/built/entities';
 
 export const openingWindowsCount = ref(0);
 

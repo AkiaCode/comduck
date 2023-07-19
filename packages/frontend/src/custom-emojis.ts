@@ -1,5 +1,5 @@
 import { shallowRef, computed, markRaw, watch } from 'vue';
-import * as Misskey from 'misskey-js';
+import * as Misskey from 'comduck-js';
 import { api, apiGet } from './os';
 import { useStream } from '@/stream';
 import { get, set } from '@/scripts/idb-proxy';

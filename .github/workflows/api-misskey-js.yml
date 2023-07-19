@@ -1,4 +1,4 @@
-name: API report (misskey.js)
+name: API report (comduck.js)
 
 on: [push, pull_request]
 
@@ -23,14 +23,14 @@ jobs:
         run: pnpm i --frozen-lockfile
 
       - name: Build
-        run: pnpm --filter misskey-js build
+        run: pnpm --filter comduck-js build
 
       - name: Check files
-        run: ls packages/misskey-js/built
+        run: ls packages/comduck-js/built
 
       - name: API report
-        run: pnpm --filter misskey-js api-prod
+        run: pnpm --filter comduck-js api-prod
 
       - name: Show report
         if: always()
-        run: cat packages/misskey-js/temp/misskey-js.api.md
+        run: cat packages/comduck-js/temp/comduck-js.api.md

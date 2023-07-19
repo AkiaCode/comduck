@@ -1,6 +1,6 @@
 import { toUnicode } from 'punycode';
 import { defineAsyncComponent } from 'vue';
-import * as misskey from 'misskey-js';
+import * as misskey from 'comduck-js';
 import { i18n } from '@/i18n';
 import copyToClipboard from '@/scripts/copy-to-clipboard';
 import { host, url } from '@/config';

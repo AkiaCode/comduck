@@ -7,7 +7,7 @@ import * as OTPAuth from 'otpauth';
 import { loadConfig } from '../../src/config.js';
 import { signup, api, post, react, startServer, waitFire } from '../utils.js';
 import type { INestApplicationContext } from '@nestjs/common';
-import type * as misskey from 'misskey-js';
+import type * as misskey from 'comduck-js';
 
 describe('2要素認証', () => {
 	let app: INestApplicationContext;

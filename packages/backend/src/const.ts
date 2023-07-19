@@ -57,7 +57,7 @@ export const FILE_TYPE_BROWSERSAFE = [
 
 	'audio/aac',
 
-	// see https://github.com/misskey-dev/misskey/pull/10686
+	// see https://github.com/ottakku/comduck/pull/10686
 	'audio/flac',
 	'audio/wav',
 	// backward compatibility

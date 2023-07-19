@@ -1,4 +1,4 @@
-import * as misskey from 'misskey-js';
+import * as misskey from 'comduck-js';
 import { $i } from '@/account';
 
 export function isFfVisibleForMe(user: misskey.entities.UserDetailed): boolean {

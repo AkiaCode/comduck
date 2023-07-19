@@ -1,5 +1,5 @@
 # Contribution guide
-We're glad you're interested in contributing Misskey! In this document you will find the information you need to contribute to the project.
+We're glad you're interested in contributing comduck! In this document you will find the information you need to contribute to the project.
 
 > **Note**
 > This project uses Japanese as its major language, **but you do not need to translate and write the Issues/PRs in Japanese.**
@@ -15,7 +15,7 @@ Before creating an issue, please check the following:
 - To avoid duplication, please search for similar issues before creating a new issue.
 - Do not use Issues to ask questions or troubleshooting.
 	- Issues should only be used to feature requests, suggestions, and bug tracking.
-	- Please ask questions or troubleshooting in ~~the [Misskey Forum](https://forum.misskey.io/)~~ [GitHub Discussions](https://github.com/misskey-dev/misskey/discussions) or [Discord](https://discord.gg/Wp8gVStHW3).
+	- Please ask questions or troubleshooting in ~~the [comduck Forum](https://forum.comduck.io/)~~ [GitHub Discussions](https://github.com/comduck-dev/comduck/discussions) or [Discord](https://discord.gg/Wp8gVStHW3).
 
 > **Warning**
 > Do not close issues that are about to be resolved. It should remain open until a commit that actually resolves it is merged.
@@ -77,14 +77,14 @@ An actual domain will be assigned so you can test the federation.
 
 ## Release
 ### Release Instructions
-1. Commit version changes in the `develop` branch ([package.json](https://github.com/misskey-dev/misskey/blob/develop/package.json))
+1. Commit version changes in the `develop` branch ([package.json](https://github.com/comduck-dev/comduck/blob/develop/package.json))
 2. Create a release PR.
 	- Into `master` from `develop` branch.
 	- The title must be in the format `Release: x.y.z`.
 		- `x.y.z` is the new version you are trying to release.
 3. Deploy and perform a simple QA check. Also verify that the tests passed.
 4. Merge it. (Do not squash commit)
-5. Create a [release of GitHub](https://github.com/misskey-dev/misskey/releases)
+5. Create a [release of GitHub](https://github.com/comduck-dev/comduck/releases)
 	- The target branch must be `master`
 	- The tag name must be the version
 
@@ -96,14 +96,14 @@ An actual domain will be assigned so you can test the federation.
 > - To celebrate the release together 🎉
 
 ## Localization (l10n)
-Misskey uses [Crowdin](https://crowdin.com/project/misskey) for localization management.
+comduck uses [Crowdin](https://crowdin.com/project/comduck) for localization management.
 You can improve our translations with your Crowdin account.
 Your changes in Crowdin are automatically submitted as a PR (with the title "New Crowdin translations") to the repository.
 The owner [@syuilo](https://github.com/syuilo) merges the PR into the develop branch before the next release.
 
 If your language is not listed in Crowdin, please open an issue.
 
-![Crowdin](https://d322cqt584bo4o.cloudfront.net/misskey/localized.svg)
+![Crowdin](https://d322cqt584bo4o.cloudfront.net/comduck/localized.svg)
 
 ## Development
 During development, it is useful to use the
@@ -144,7 +144,7 @@ pnpm dev
 ### Run test
 Create a config file.
 ```
-cp .github/misskey/test.yml .config/
+cp .github/comduck/test.yml .config/
 ```
 Prepare DB/Redis for testing.
 ```
@@ -167,21 +167,21 @@ TODO
 
 ## Environment Variable
 
-- `MISSKEY_CONFIG_YML`: Specify the file path of config.yml instead of default.yml (e.g. `2nd.yml`).
-- `MISSKEY_WEBFINGER_USE_HTTP`: If it's set true, WebFinger requests will be http instead of https, useful for testing federation between servers in localhost. NEVER USE IN PRODUCTION.
+- `comduck_CONFIG_YML`: Specify the file path of config.yml instead of default.yml (e.g. `2nd.yml`).
+- `comduck_WEBFINGER_USE_HTTP`: If it's set true, WebFinger requests will be http instead of https, useful for testing federation between servers in localhost. NEVER USE IN PRODUCTION.
 
 ## Continuous integration
-Misskey uses GitHub Actions for executing automated tests.
+comduck uses GitHub Actions for executing automated tests.
 Configuration files are located in [`/.github/workflows`](/.github/workflows).
 
 ## Vue
-Misskey uses Vue(v3) as its front-end framework.
+comduck uses Vue(v3) as its front-end framework.
 - Use TypeScript.
 - **When creating a new component, please use the Composition API (with [setup sugar](https://v3.vuejs.org/api/sfc-script-setup.html) and [ref sugar](https://github.com/vuejs/rfcs/discussions/369)) instead of the Options API.**
 	- Some of the existing components are implemented in the Options API, but it is an old implementation. Refactors that migrate those components to the Composition API are also welcome.
 
 ## nirax
-niraxは、Misskeyで使用しているオリジナルのフロントエンドルーティングシステムです。
+niraxは、comduckで使用しているオリジナルのフロントエンドルーティングシステムです。
 **vue-routerから影響を多大に受けているので、まずはvue-routerについて学ぶことをお勧めします。**
 
 ### ルート定義
@@ -210,7 +210,7 @@ vue-routerとの最大の違いは、niraxは複数のルーターが存在す�
 
 ## Storybook
 
-Misskey uses [Storybook](https://storybook.js.org/) for UI development.
+comduck uses [Storybook](https://storybook.js.org/) for UI development.
 
 ### Setup & Run
 
@@ -219,7 +219,7 @@ Misskey uses [Storybook](https://storybook.js.org/) for UI development.
 ##### Setup
 
 ```bash
-pnpm --filter misskey-js build
+pnpm --filter comduck-js build
 pnpm --filter frontend tsc -p .storybook && (node packages/frontend/.storybook/preload-locale.js & node packages/frontend/.storybook/preload-theme.js)
 ```
 
@@ -234,7 +234,7 @@ node packages/frontend/.storybook/generate.js && pnpm --filter frontend storyboo
 ##### Setup
 
 ```bash
-pnpm --filter misskey-js build
+pnpm --filter comduck-js build
 ```
 
 ##### Run
@@ -416,7 +416,7 @@ pnpm dlx typeorm migration:generate -d ormconfig.js -o <migration name>
 ### JSON SchemaのobjectでanyOfを使うとき
 JSON Schemaで、objectに対してanyOfを使う場合、anyOfの中でpropertiesを定義しないこと。  
 バリデーションが効かないため。（SchemaTypeもそのように作られており、objectのanyOf内のpropertiesは捨てられます）  
-https://github.com/misskey-dev/misskey/pull/10082
+https://github.com/comduck-dev/comduck/pull/10082
 
 テキストhogeおよびfugaについて、片方を必須としつつ両方の指定もありうる場合:
 
@@ -435,7 +435,7 @@ export const paramDef = {
 ```
 
 ### コネクションには`markRaw`せよ
-**Vueのコンポーネントのdataオプションとして**misskey.jsのコネクションを設定するとき、必ず`markRaw`でラップしてください。インスタンスが不必要にリアクティブ化されることで、misskey.js内の処理で不具合が発生するとともに、パフォーマンス上の問題にも繋がる。なお、Composition APIを使う場合はこの限りではない(リアクティブ化はマニュアルなため)。
+**Vueのコンポーネントのdataオプションとして**comduck.jsのコネクションを設定するとき、必ず`markRaw`でラップしてください。インスタンスが不必要にリアクティブ化されることで、comduck.js内の処理で不具合が発生するとともに、パフォーマンス上の問題にも繋がる。なお、Composition APIを使う場合はこの限りではない(リアクティブ化はマニュアルなため)。
 
 ### JSONのimportに気を付けよう
 TypeScriptでjsonをimportすると、tscでコンパイルするときにそのjsonファイルも一緒にdistディレクトリに吐き出されてしまう。この挙動により、意図せずファイルの書き換えが発生することがあるので、jsonをimportするときは書き換えられても良いものかどうか確認すること。書き換えされて欲しくない場合は、importで読み込むのではなく、`fs.readFileSync`などの関数を使って読み込むようにすればよい。

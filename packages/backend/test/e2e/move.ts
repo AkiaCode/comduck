@@ -7,7 +7,7 @@ import { jobQueue } from '@/boot/common.js';
 import { secureRndstr } from '@/misc/secure-rndstr.js';
 import { uploadFile, signup, startServer, initTestDb, api, sleep, successfulApiCall } from '../utils.js';
 import type { INestApplicationContext } from '@nestjs/common';
-import type * as misskey from 'misskey-js';
+import type * as misskey from 'comduck-js';
 
 describe('Account Move', () => {
 	let app: INestApplicationContext;

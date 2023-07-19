@@ -191,7 +191,7 @@ export class FetchInstanceMetadataService {
 		const url = 'https://' + instance.host;
 
 		if (doc) {
-			// https://github.com/misskey-dev/misskey/pull/8220#issuecomment-1025104043
+			// https://github.com/ottakku/comduck/pull/8220#issuecomment-1025104043
 			const href = Array.from(doc.getElementsByTagName('link')).reverse().find(link => link.relList.contains('icon'))?.href;
 
 			if (href) {
@@ -222,9 +222,9 @@ export class FetchInstanceMetadataService {
 		if (doc) {
 			const url = 'https://' + instance.host;
 
-			// https://github.com/misskey-dev/misskey/pull/8220#issuecomment-1025104043
+			// https://github.com/ottakku/comduck/pull/8220#issuecomment-1025104043
 			const links = Array.from(doc.getElementsByTagName('link')).reverse();
-			// https://github.com/misskey-dev/misskey/pull/8220/files/0ec4eba22a914e31b86874f12448f88b3e58dd5a#r796487559
+			// https://github.com/ottakku/comduck/pull/8220/files/0ec4eba22a914e31b86874f12448f88b3e58dd5a#r796487559
 			const href =
 				[
 					links.find(link => link.relList.contains('apple-touch-icon-precomposed'))?.href,

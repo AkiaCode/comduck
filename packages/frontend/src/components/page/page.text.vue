@@ -8,7 +8,7 @@
 <script lang="ts" setup>
 import { defineAsyncComponent } from 'vue';
 import * as mfm from 'mfm-js';
-import * as Misskey from 'misskey-js';
+import * as Misskey from 'comduck-js';
 import { TextBlock } from './block.type';
 import { extractUrlFromMfm } from '@/scripts/extract-url-from-mfm';
 import { $i } from '@/account';

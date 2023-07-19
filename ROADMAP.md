@@ -8,12 +8,12 @@ This is the phase we are at now. We need to make a high-maintenance environment 
 - ~~Make the number of type errors zero (backend)~~ → Done ✔️
 - Improve CI
 	- ~~Fix tests~~ → Done ✔️
-	- Fix random test failures - https://github.com/misskey-dev/misskey/issues/7985 and https://github.com/misskey-dev/misskey/issues/7986
+	- Fix random test failures - https://github.com/ottakku/comduck/issues/7985 and https://github.com/ottakku/comduck/issues/7986
 	- Add more tests
 		- ~~May need to implement a mechanism that allows for DI~~ → Done ✔️
-			- https://github.com/misskey-dev/misskey/pull/9085
+			- https://github.com/ottakku/comduck/pull/9085
 	- ~~Measure coverage~~ → Done ✔️
-		- https://github.com/misskey-dev/misskey/pull/9081
+		- https://github.com/ottakku/comduck/pull/9081
 - Improve documentation
 - Refactoring
 	- Extract the logic of each endpoint definition into a service and just call it
@@ -22,7 +22,7 @@ This is the phase we are at now. We need to make a high-maintenance environment 
 Once Phase 1 is complete and an environment conducive to the development of a stable system is in place, the implementation of new functions can begin gradually.
 
 - Improve features for moderation
-- OAuth2 support https://github.com/misskey-dev/misskey/issues/8262
+- OAuth2 support https://github.com/ottakku/comduck/issues/8262
 - GraphQL support?
 
 ## (3) Improve scalability

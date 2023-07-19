@@ -4,7 +4,7 @@ import * as assert from 'assert';
 import { Note } from '@/models/entities/Note.js';
 import { signup, post, uploadUrl, startServer, initTestDb, api, uploadFile } from '../utils.js';
 import type { INestApplicationContext } from '@nestjs/common';
-import type * as misskey from 'misskey-js';
+import type * as misskey from 'comduck-js';
 
 describe('Note', () => {
 	let app: INestApplicationContext;

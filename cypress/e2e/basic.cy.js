@@ -213,10 +213,10 @@ describe('After user setup', () => {
 	it('note', () => {
 		cy.get('[data-cy-open-post-form]').should('be.visible');
 		cy.get('[data-cy-open-post-form]').click();
-		cy.get('[data-cy-post-form-text]').type('Hello, Misskey!');
+		cy.get('[data-cy-post-form-text]').type('Hello, Comduck!');
 		cy.get('[data-cy-open-post-form-submit]').click();
 
-		cy.contains('Hello, Misskey!');
+		cy.contains('Hello, comduck!');
   });
 
 	it('open note form with hotkey', () => {

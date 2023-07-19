@@ -54,8 +54,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { toString } from 'misskey-js/built/acct';
-import { UserDetailed } from 'misskey-js/built/entities';
+import { toString } from 'comduck-js/built/acct';
+import { UserDetailed } from 'comduck-js/built/entities';
 import FormInfo from '@/components/MkInfo.vue';
 import MkInput from '@/components/MkInput.vue';
 import MkButton from '@/components/MkButton.vue';

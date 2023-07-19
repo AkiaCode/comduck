@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as misskey from 'misskey-js';
+import * as misskey from 'comduck-js';
 import MkFollowButton from '@/components/MkFollowButton.vue';
 import number from '@/filters/number';
 import { userPage } from '@/filters/user';

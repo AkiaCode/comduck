@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { } from 'vue';
-import * as misskey from 'misskey-js';
+import * as misskey from 'comduck-js';
 
 const props = withDefaults(defineProps<{
 	user: misskey.entities.User;

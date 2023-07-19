@@ -1,5 +1,5 @@
 import { defineAsyncComponent, reactive, ref } from 'vue';
-import * as misskey from 'misskey-js';
+import * as misskey from 'comduck-js';
 import { showSuspendedDialog } from './scripts/show-suspended-dialog';
 import { i18n } from './i18n';
 import { miLocalStorage } from './local-storage';
